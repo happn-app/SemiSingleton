@@ -1,0 +1,94 @@
+/*
+ * SemiSingletonStore.swift
+ * SemiSingleton
+ *
+ * Created by François Lamboley on 1/8/18.
+ * Copyright © 2018 happn. All rights reserved.
+ */
+
+import Foundation
+import os.log
+
+
+
+public protocol SemiSingleton : class {
+	
+	associatedtype SemiSingletonKey : Hashable
+	
+	init(key: SemiSingletonKey)
+	
+}
+
+
+public class SemiSingletonStore {
+	
+	public static let shared = SemiSingletonStore(forceClassInKeys: true)
+	
+	public let forceClassInKeys: Bool
+	
+	public init(forceClassInKeys fcik: Bool) {
+		forceClassInKeys = fcik
+	}
+	
+	public func semiSingleton<K, O : SemiSingleton>(forKey k: K) -> O where O.SemiSingletonKey == K {
+		return retrievingQueue.sync {
+			let key = StoreKey(key: k, objectType: forceClassInKeys ? O.self : nil)
+			if let ro = registeredObjects.object(forKey: key) {
+				/* An object has been registered for the given key */
+				guard let o = ro as? O else {
+					/* Invalid type found. We do not un-register the previous object, we
+					  * simply return a non-singleton... */
+					if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Asked to retrieve an object of type %{public}@ for key %@, but registered object is of type %{public}@. Creating a new, non-singleton’d object of required type. For reference, registered object is %@", log: $0, type: .error, String(describing: O.self), String(describing: k), String(describing: type(of: ro)), String(describing: ro)) }}
+					else                                                          {NSLog("***** Asked to retrieve an object of type %@ for key %@, but registered object is of type %@. Creating a new, non-singleton’d object of required type. For reference, registered object is %@", String(describing: O.self), String(describing: k), String(describing: type(of: ro)), String(describing: ro))}
+					assert(!forceClassInKeys)
+					return O(key: k)
+				}
+				return o
+			}
+			
+			let o = O(key: k)
+			registeredObjects.setObject(o, forKey: key)
+			return o
+		}
+	}
+	
+	public func registeredSemiSingleton<K, O : SemiSingleton>(forKey k: K) -> O? where O.SemiSingletonKey == K {
+		return retrievingQueue.sync {
+			let key = StoreKey(key: k, objectType: forceClassInKeys ? O.self : nil)
+			return registeredObjects.object(forKey: key) as? O
+		}
+	}
+	
+	private class StoreKey : NSObject {
+		
+		let objectType: AnyObject.Type?
+		let key: AnyHashable
+		
+		init(key k: AnyHashable, objectType ot: AnyObject.Type?) {
+			key = k
+			objectType = ot
+		}
+		
+		override func isEqual(_ object: Any?) -> Bool {
+			guard let object = object as? StoreKey else {return false}
+			return object == self
+		}
+		
+		override var hash: Int {
+			return hashValue
+		}
+		
+		override var hashValue: Int {
+			return key.hashValue &+ (objectType.flatMap{ NSStringFromClass($0).hashValue } ?? 0)
+		}
+		
+		static func ==(lhs: StoreKey, rhs: StoreKey) -> Bool {
+			return lhs.objectType == rhs.objectType && lhs.key == rhs.key
+		}
+		
+	}
+	
+	private var registeredObjects = NSMapTable<StoreKey, AnyObject>.strongToWeakObjects()
+	private let retrievingQueue = DispatchQueue(label: "SemiSingletonStore Object Retrieving Queue", qos: .userInitiated)
+	
+}

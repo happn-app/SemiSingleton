@@ -14,11 +14,12 @@ let package = Package(
 		)
 	],
 	dependencies: [
+		.package(url: "git@github.com:happn-app/DummyLinuxOSLog.git", from: "1.0.0")
 	],
 	targets: [
 		.target(
 			name: "SemiSingleton",
-			dependencies: []
+			dependencies: ["DummyLinuxOSLog"]
 		),
 		.testTarget(
 			name: "SemiSingletonTests",

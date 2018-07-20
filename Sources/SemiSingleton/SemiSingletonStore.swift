@@ -11,6 +11,10 @@ import Foundation
 	import os.log
 #endif
 
+#if canImport(DummyLinuxOSLog)
+	import DummyLinuxOSLog
+#endif
+
 
 
 public protocol SemiSingleton : class {

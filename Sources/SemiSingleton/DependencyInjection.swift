@@ -7,15 +7,25 @@
  */
 
 import Foundation
-import os.log
+#if canImport(os)
+	import os.log
+#endif
+
+#if canImport(DummyLinuxOSLog)
+	import DummyLinuxOSLog
+#endif
 
 
 
 public struct DependencyInjection {
 	
 	init() {
-		if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {log = .default}
-		else                                                          {log = nil}
+		#if canImport(os)
+			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {log = .default}
+			else                                                          {log = nil}
+		#else
+		log = ()
+		#endif
 	}
 	
 	public var log: OSLog?

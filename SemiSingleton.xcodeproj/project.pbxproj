@@ -24,6 +24,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		7B37122C21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */; };
+		7B37122D21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */; };
+		7B37122E21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */; };
+		7B37122F21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */; };
 		7B3DA8FA2013764E00F4BA76 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DA8F92013764E00F4BA76 /* DependencyInjection.swift */; };
 		7B3DA8FB2013764E00F4BA76 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DA8F92013764E00F4BA76 /* DependencyInjection.swift */; };
 		7B3DA8FC2013764E00F4BA76 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DA8F92013764E00F4BA76 /* DependencyInjection.swift */; };
@@ -100,6 +104,7 @@
 		7B21BACE2003B2C600DFF758 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		7B21BAD02003BBC700DFF758 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		7B21BAD12003BF0600DFF758 /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxStrongToWeakMapTable.swift; sourceTree = "<group>"; };
 		7B3DA8F92013764E00F4BA76 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
 		7B3DA8FF20137B0E00F4BA76 /* SimpleSemiSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSemiSingleton.swift; sourceTree = "<group>"; };
 		7B7A34BF20027B4600348DF4 /* SemiSingleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SemiSingleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +226,7 @@
 			children = (
 				7B3DA8F92013764E00F4BA76 /* DependencyInjection.swift */,
 				7B8BD01320026AF1009BE667 /* SemiSingletonStore.swift */,
+				7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */,
 			);
 			path = SemiSingleton;
 			sourceTree = "<group>";
@@ -539,6 +545,7 @@
 			files = (
 				7B3DA8FB2013764E00F4BA76 /* DependencyInjection.swift in Sources */,
 				7B7A34D720027B6C00348DF4 /* SemiSingletonStore.swift in Sources */,
+				7B37122D21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,6 +564,7 @@
 			files = (
 				7B3DA8FA2013764E00F4BA76 /* DependencyInjection.swift in Sources */,
 				7B8BD0372002752A009BE667 /* SemiSingletonStore.swift in Sources */,
+				7B37122C21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +583,7 @@
 			files = (
 				7B3DA8FD2013764E00F4BA76 /* DependencyInjection.swift in Sources */,
 				7BB52E4B20027A0E007CAD7B /* SemiSingletonStore.swift in Sources */,
+				7B37122F21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +593,7 @@
 			files = (
 				7B3DA8FC2013764E00F4BA76 /* DependencyInjection.swift in Sources */,
 				7BC696ED200277AE007BC3E9 /* SemiSingletonStore.swift in Sources */,
+				7B37122E21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

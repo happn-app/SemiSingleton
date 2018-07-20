@@ -54,8 +54,12 @@ public class SemiSingletonStore {
 				guard let o = ro as? O else {
 					/* Invalid type found. We do not un-register the previous object,
 					 * we simply return a non-singleton... */
-					if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Asked to retrieve an object of type %{public}@ for key %@, but registered object is of type %{public}@. Creating a new, non-singleton’d object of required type. For reference, registered object is %@", log: $0, type: .error, String(describing: O.self), String(describing: k), String(describing: type(of: ro)), String(describing: ro)) }}
-					else                                                          {NSLog("***** Asked to retrieve an object of type %@ for key %@, but registered object is of type %@. Creating a new, non-singleton’d object of required type. For reference, registered object is %@", String(describing: O.self), String(describing: k), String(describing: type(of: ro)), String(describing: ro))}
+					#if !os(Linux)
+						if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Asked to retrieve an object of type %{public}@ for key %@, but registered object is of type %{public}@. Creating a new, non-singleton’d object of required type. For reference, registered object is %@", log: $0, type: .error, String(describing: O.self), String(describing: k), String(describing: type(of: ro)), String(describing: ro)) }}
+						else                                                          {NSLog("***** Asked to retrieve an object of type %@ for key %@, but registered object is of type %@. Creating a new, non-singleton’d object of required type. For reference, registered object is %@", String(describing: O.self), String(describing: k), String(describing: type(of: ro)), String(describing: ro))}
+					#else
+						NSLogString("***** Asked to retrieve an object of type \(String(describing: O.self)) for key \(String(describing: k)), but registered object is of type \(String(describing: type(of: ro))). Creating a new, non-singleton’d object of required type. For reference, registered object is \(String(describing: ro))")
+					#endif
 					assert(!forceClassInKeys)
 					
 					isNew = true
@@ -87,8 +91,12 @@ public class SemiSingletonStore {
 				guard let o = ro as? O else {
 					/* Invalid type found. We do not un-register the previous object,
 					 * we simply return a non-singleton... */
-					if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Asked to retrieve an object of type %{public}@ for key %@, but registered object is of type %{public}@. Creating a new, non-singleton’d object of required type. For reference, registered object is %@", log: $0, type: .error, String(describing: O.self), String(describing: k), String(describing: type(of: ro)), String(describing: ro)) }}
-					else                                                          {NSLog("***** Asked to retrieve an object of type %@ for key %@, but registered object is of type %@. Creating a new, non-singleton’d object of required type. For reference, registered object is %@", String(describing: O.self), String(describing: k), String(describing: type(of: ro)), String(describing: ro))}
+					#if !os(Linux)
+						if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {di.log.flatMap{ os_log("Asked to retrieve an object of type %{public}@ for key %@, but registered object is of type %{public}@. Creating a new, non-singleton’d object of required type. For reference, registered object is %@", log: $0, type: .error, String(describing: O.self), String(describing: k), String(describing: type(of: ro)), String(describing: ro)) }}
+						else                                                          {NSLog("***** Asked to retrieve an object of type %@ for key %@, but registered object is of type %@. Creating a new, non-singleton’d object of required type. For reference, registered object is %@", String(describing: O.self), String(describing: k), String(describing: type(of: ro)), String(describing: ro))}
+					#else
+						NSLogString("***** Asked to retrieve an object of type \(String(describing: O.self)) for key \(String(describing: k)), but registered object is of type \(String(describing: type(of: ro))). Creating a new, non-singleton’d object of required type. For reference, registered object is \(String(describing: ro))")
+					#endif
 					assert(!forceClassInKeys)
 					
 					isNew = true

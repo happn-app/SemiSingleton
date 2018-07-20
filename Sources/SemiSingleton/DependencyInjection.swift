@@ -33,6 +33,9 @@ public func os_log(_ message: StaticString, dso: UnsafeRawPointer? = #dsohandle,
 		NSLogv(nonOSLogMessageString, vaListPtr)
 	})
 }
+public func NSLogString(_ str: String) {
+	NSLog(str.replacingOccurrences(of: "%", with: "%%"))
+}
 #endif
 
 public struct DependencyInjection {

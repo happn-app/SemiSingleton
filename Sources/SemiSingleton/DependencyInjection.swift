@@ -24,7 +24,7 @@ public struct DependencyInjection {
 			if #available(OSX 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {log = .default}
 			else                                                          {log = nil}
 		#else
-		log = ()
+			log = nil
 		#endif
 	}
 	

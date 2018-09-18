@@ -17,11 +17,12 @@ class SimpleSemiSingleton : SemiSingleton {
 	static var objectNumber = 0
 	
 	typealias SemiSingletonKey = String
+	typealias SemiSingletonAdditionalInitInfo = Void
 	
 	let key: String
 	let objectNumber: Int
 	
-	required init(key k: String) {
+	required init(key k: String, additionalInfo: Void) {
 		SimpleSemiSingleton.objectNumber += 1
 		objectNumber = SimpleSemiSingleton.objectNumber
 		key = k

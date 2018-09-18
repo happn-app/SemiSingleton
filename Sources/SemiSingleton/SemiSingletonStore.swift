@@ -20,16 +20,18 @@ import Foundation
 public protocol SemiSingleton : class {
 	
 	associatedtype SemiSingletonKey : Hashable
+	associatedtype SemiSingletonAdditionalInitInfo
 	
-	init(key: SemiSingletonKey)
+	init(key: SemiSingletonKey, additionalInfo: SemiSingletonAdditionalInitInfo)
 	
 }
 
 public protocol SemiSingletonWithFallibleInit : class {
 	
 	associatedtype SemiSingletonKey : Hashable
+	associatedtype SemiSingletonAdditionalInitInfo
 	
-	init(key: SemiSingletonKey) throws
+	init(key: SemiSingletonKey, additionalInfo: SemiSingletonAdditionalInitInfo) throws
 	
 }
 
@@ -44,13 +46,12 @@ public class SemiSingletonStore {
 		forceClassInKeys = fcik
 	}
 	
-	public func semiSingleton<K, O : SemiSingleton>(forKey k: K) -> O where O.SemiSingletonKey == K {
-		var isNew = false
-		return semiSingleton(forKey: k, isNew: &isNew)
-	}
+	/* ************
+	   MARK: - Core
+	   ************ */
 	
-	/* This method is duplicated below */
-	public func semiSingleton<K, O : SemiSingleton>(forKey k: K, isNew: inout Bool) -> O where O.SemiSingletonKey == K {
+	/* This method is duplicated below in a throwable version */
+	public func semiSingleton<O : SemiSingleton>(forKey k: O.SemiSingletonKey, additionalInitInfo: O.SemiSingletonAdditionalInitInfo, isNew: inout Bool) -> O {
 		return retrievingQueue.sync{
 			let key = StoreKey(key: k, objectType: forceClassInKeys ? O.self : nil)
 			if let ro = registeredObjects.object(forKey: key) {
@@ -67,7 +68,7 @@ public class SemiSingletonStore {
 					assert(!forceClassInKeys)
 					
 					isNew = true
-					return O(key: k)
+					return O(key: k, additionalInfo: additionalInitInfo)
 				}
 				
 				isNew = false
@@ -75,19 +76,14 @@ public class SemiSingletonStore {
 			}
 			
 			isNew = true
-			let o = O(key: k)
+			let o = O(key: k, additionalInfo: additionalInitInfo)
 			registeredObjects.setObject(o, forKey: key)
 			return o
 		}
 	}
 	
-	public func semiSingleton<K, O : SemiSingletonWithFallibleInit>(forKey k: K) throws -> O where O.SemiSingletonKey == K {
-		var isNew = false
-		return try semiSingleton(forKey: k, isNew: &isNew)
-	}
-	
-	/* This method is duplicated above */
-	public func semiSingleton<K, O : SemiSingletonWithFallibleInit>(forKey k: K, isNew: inout Bool) throws -> O where O.SemiSingletonKey == K {
+	/* This method is duplicated above in a non-throwable version */
+	public func semiSingleton<O : SemiSingletonWithFallibleInit>(forKey k: O.SemiSingletonKey, additionalInitInfo: O.SemiSingletonAdditionalInitInfo, isNew: inout Bool) throws -> O {
 		return try retrievingQueue.sync{
 			let key = StoreKey(key: k, objectType: forceClassInKeys ? O.self : nil)
 			if let ro = registeredObjects.object(forKey: key) {
@@ -104,7 +100,7 @@ public class SemiSingletonStore {
 					assert(!forceClassInKeys)
 					
 					isNew = true
-					return try O(key: k)
+					return try O(key: k, additionalInfo: additionalInitInfo)
 				}
 				
 				isNew = false
@@ -112,7 +108,7 @@ public class SemiSingletonStore {
 			}
 			
 			isNew = true
-			let o = try O(key: k)
+			let o = try O(key: k, additionalInfo: additionalInitInfo)
 			registeredObjects.setObject(o, forKey: key)
 			return o
 		}
@@ -131,6 +127,40 @@ public class SemiSingletonStore {
 			return registeredObjects.object(forKey: key) as? O
 		}
 	}
+	
+	/* ********************
+	   MARK: - Conveniences
+	   ******************** */
+	
+	public func semiSingleton<O : SemiSingleton>(forKey k: O.SemiSingletonKey, additionalInitInfo: O.SemiSingletonAdditionalInitInfo) -> O {
+		var isNew = false
+		return semiSingleton(forKey: k, additionalInitInfo: additionalInitInfo, isNew: &isNew)
+	}
+	
+	public func semiSingleton<O : SemiSingleton>(forKey k: O.SemiSingletonKey) -> O where O.SemiSingletonAdditionalInitInfo == Void {
+		return semiSingleton(forKey: k, additionalInitInfo: ())
+	}
+	
+	public func semiSingleton<O : SemiSingleton>(forKey k: O.SemiSingletonKey, isNew: inout Bool) -> O where O.SemiSingletonAdditionalInitInfo == Void {
+		return semiSingleton(forKey: k, additionalInitInfo: (), isNew: &isNew)
+	}
+	
+	public func semiSingleton<O : SemiSingletonWithFallibleInit>(forKey k: O.SemiSingletonKey, additionalInitInfo: O.SemiSingletonAdditionalInitInfo) throws -> O {
+		var isNew = false
+		return try semiSingleton(forKey: k, additionalInitInfo: additionalInitInfo, isNew: &isNew)
+	}
+	
+	public func semiSingleton<O : SemiSingletonWithFallibleInit>(forKey k: O.SemiSingletonKey) throws -> O where O.SemiSingletonAdditionalInitInfo == Void {
+		return try semiSingleton(forKey: k, additionalInitInfo: ())
+	}
+	
+	public func semiSingleton<O : SemiSingletonWithFallibleInit>(forKey k: O.SemiSingletonKey, isNew: inout Bool) throws -> O where O.SemiSingletonAdditionalInitInfo == Void {
+		return try semiSingleton(forKey: k, additionalInitInfo: (), isNew: &isNew)
+	}
+	
+	/* ***************
+      MARK: - Private
+	   *************** */
 	
 	private class StoreKey : NSObject {
 		

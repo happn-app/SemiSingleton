@@ -178,10 +178,6 @@ public class SemiSingletonStore {
 		}
 		
 		override var hash: Int {
-			return hashValue
-		}
-		
-		override var hashValue: Int {
 			return key.hashValue &+ (objectType.flatMap{ NSStringFromClass($0).hashValue } ?? 0)
 		}
 		

@@ -22,7 +22,16 @@ public protocol SemiSingleton : class {
 	associatedtype SemiSingletonKey : Hashable
 	associatedtype SemiSingletonAdditionalInitInfo
 	
-	init(key: SemiSingletonKey, additionalInfo: SemiSingletonAdditionalInitInfo)
+	/** Init a semi-singleton instance.
+	
+	You can use the additional info to help initializing your instance. The store
+	is given for informational purposes, mainly so you can instantiate other
+	semi-singletons from the same store.
+	
+	This init method cannot fail. If you want to create a semi-singleton whose
+	initialization can fail, you should conform to the
+	`SemiSingletonWithFallibleInit` protocol. */
+	init(key: SemiSingletonKey, additionalInfo: SemiSingletonAdditionalInitInfo, store: SemiSingletonStore)
 	
 }
 
@@ -31,7 +40,15 @@ public protocol SemiSingletonWithFallibleInit : class {
 	associatedtype SemiSingletonKey : Hashable
 	associatedtype SemiSingletonAdditionalInitInfo
 	
-	init(key: SemiSingletonKey, additionalInfo: SemiSingletonAdditionalInitInfo) throws
+	/** Init a semi-singleton instance.
+	
+	You can use the additional info to help initializing your instance. The store
+	is given for informational purposes, mainly so you can instantiate other
+	semi-singletons from the same store.
+	
+	This init method cann fail. If you create a semi-singleton whose init cannot
+	fail, you should consider conforming to `SemiSingleton` instead. */
+	init(key: SemiSingletonKey, additionalInfo: SemiSingletonAdditionalInitInfo, store: SemiSingletonStore) throws
 	
 }
 
@@ -68,7 +85,7 @@ public class SemiSingletonStore {
 					assert(!forceClassInKeys)
 					
 					isNew = true
-					return O(key: k, additionalInfo: additionalInitInfo)
+					return O(key: k, additionalInfo: additionalInitInfo, store: self)
 				}
 				
 				isNew = false
@@ -76,7 +93,7 @@ public class SemiSingletonStore {
 			}
 			
 			isNew = true
-			let o = O(key: k, additionalInfo: additionalInitInfo)
+			let o = O(key: k, additionalInfo: additionalInitInfo, store: self)
 			registeredObjects.setObject(o, forKey: key)
 			return o
 		}
@@ -100,7 +117,7 @@ public class SemiSingletonStore {
 					assert(!forceClassInKeys)
 					
 					isNew = true
-					return try O(key: k, additionalInfo: additionalInitInfo)
+					return try O(key: k, additionalInfo: additionalInitInfo, store: self)
 				}
 				
 				isNew = false
@@ -108,7 +125,7 @@ public class SemiSingletonStore {
 			}
 			
 			isNew = true
-			let o = try O(key: k, additionalInfo: additionalInitInfo)
+			let o = try O(key: k, additionalInfo: additionalInitInfo, store: self)
 			registeredObjects.setObject(o, forKey: key)
 			return o
 		}

@@ -22,7 +22,7 @@ class SimpleSemiSingleton : SemiSingleton {
 	let key: String
 	let objectNumber: Int
 	
-	required init(key k: String, additionalInfo: Void) {
+	required init(key k: String, additionalInfo: Void, store: SemiSingletonStore) {
 		SimpleSemiSingleton.objectNumber += 1
 		objectNumber = SimpleSemiSingleton.objectNumber
 		key = k

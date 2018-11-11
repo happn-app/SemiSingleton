@@ -1,5 +1,10 @@
+# macOS
 .DS_Store
-/.build
-/Packages
 
+# Xcode
 xcuserdata/
+
+# Package Managers
+/.build/
+/Carthage/*
+!/Carthage/*.xcfilelist

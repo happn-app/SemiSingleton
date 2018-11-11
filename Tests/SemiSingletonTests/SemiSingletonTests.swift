@@ -37,8 +37,8 @@ class SemiSingletonTests: XCTestCase {
 		let semiSingletonStore = SemiSingletonStore(forceClassInKeys: true)
 		let s: ReentrantSemiSingletonInit = try semiSingletonStore.semiSingleton(forKey: key, additionalInitInfo: .sameClassOtherKey)
 		XCTAssertEqual(s.key, key)
-		XCTAssertEqual(SimpleSemiSingleton.objectNumber, 1)
-		XCTAssertEqual(ReentrantSemiSingletonInit.objectNumber, 1)
+		XCTAssertEqual(SimpleSemiSingleton.objectNumber, 0)
+		XCTAssertEqual(ReentrantSemiSingletonInit.objectNumber, 2)
 	}
 	
 	func testInvalidReentrantSemiSingletonAllocation() throws {
@@ -51,7 +51,10 @@ class SemiSingletonTests: XCTestCase {
 		let key = "hello"
 		let semiSingletonStore = SemiSingletonStore(forceClassInKeys: true)
 		let semiSingletonStore2 = SemiSingletonStore(forceClassInKeys: true)
-		XCTAssertThrowsError(try semiSingletonStore.semiSingleton(forKey: key, additionalInitInfo: .sameClassOtherStoreThenSameStoreOtherKey(store: semiSingletonStore2)) as ReentrantSemiSingletonInit)
+		let s: ReentrantSemiSingletonInit = try semiSingletonStore.semiSingleton(forKey: key, additionalInitInfo: .sameClassOtherStoreThenSameStoreOtherKey(store: semiSingletonStore2))
+		XCTAssertEqual(s.key, key)
+		XCTAssertEqual(SimpleSemiSingleton.objectNumber, 0)
+		XCTAssertEqual(ReentrantSemiSingletonInit.objectNumber, 3)
 	}
 	
 	/* TODO: More tests... */

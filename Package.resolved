@@ -9,6 +9,15 @@
           "revision": "47333c87665e0f9e957246148965418c9a4ad823",
           "version": "1.0.0"
         }
+      },
+      {
+        "package": "RecursiveSyncDispatch",
+        "repositoryURL": "git@github.com:happn-app/RecursiveSyncDispatch.git",
+        "state": {
+          "branch": null,
+          "revision": "e3b86d417806ad94a7d85ce68988192f54c27868",
+          "version": "1.0.0"
+        }
       }
     ]
   },

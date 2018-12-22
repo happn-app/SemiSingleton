@@ -113,8 +113,8 @@ public class SemiSingletonStore {
 		}
 	}
 	
-	/* This method is duplicated below in a throwable version. One key difference
-	 * is about re-entrant SemiSingleton init.
+	/* This method is duplicated above in a non-throwable version. One key
+	 * difference is about re-entrant SemiSingleton init.
 	 * In the throwable version, instantiating a semi-singleton with the same key
 	 * as another semi-singleton being inited will result in the init throwing.
 	 * In the non-throwable version you’ll get a fatal error. */

@@ -6,6 +6,8 @@ extension SemiSingletonTests {
         ("testReentrantOtherClassSemiSingletonAllocation", testReentrantOtherClassSemiSingletonAllocation),
         ("testReentrantSameClassSemiSingletonAllocation", testReentrantSameClassSemiSingletonAllocation),
         ("testReentrantThroughHopSemiSingletonAllocation", testReentrantThroughHopSemiSingletonAllocation),
+        ("testSimpleSemiSingletonDeallocationAsyncDispatch", testSimpleSemiSingletonDeallocationAsyncDispatch),
+        ("testSimpleSemiSingletonDeallocationAutoreleasePool", testSimpleSemiSingletonDeallocationAutoreleasePool),
         ("testSimpleSemiSingletonNonReallocation", testSimpleSemiSingletonNonReallocation),
     ]
 }

@@ -1,8 +1,8 @@
 import XCTest
-@testable import SemiSingletonTests
 
+import SemiSingletonTests
 
+var tests = [XCTestCaseEntry]()
+tests += SemiSingletonTests.__allTests()
 
-XCTMain([
-	testCase(SemiSingletonTests.allTests)
-])
+XCTMain(tests)

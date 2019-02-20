@@ -59,14 +59,4 @@ class SemiSingletonTests: XCTestCase {
 	
 	/* TODO: More tests... */
 	
-	
-	/* Fill this array with all the tests to have Linux testing compatibility. */
-	static var allTests = [
-		("testSimpleSemiSingletonNonReallocation", testSimpleSemiSingletonNonReallocation),
-		("testReentrantOtherClassSemiSingletonAllocation", testReentrantOtherClassSemiSingletonAllocation),
-		("testReentrantSameClassSemiSingletonAllocation", testReentrantSameClassSemiSingletonAllocation),
-		("testInvalidReentrantSemiSingletonAllocation", testInvalidReentrantSemiSingletonAllocation),
-		("testReentrantThroughHopSemiSingletonAllocation", testReentrantThroughHopSemiSingletonAllocation),
-	]
-	
 }

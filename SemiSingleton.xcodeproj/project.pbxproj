@@ -3,148 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 48;
 	objects = {
-
-/* Begin PBXAggregateTarget section */
-		7B639D8D2002CDE70079C664 /* All */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 7B639D902002CDE70079C664 /* Build configuration list for PBXAggregateTarget "All" */;
-			buildPhases = (
-			);
-			dependencies = (
-				7B639D922002CDF40079C664 /* PBXTargetDependency */,
-				7B639D942002CDF40079C664 /* PBXTargetDependency */,
-				7B639D962002CDF40079C664 /* PBXTargetDependency */,
-				7B639D982002CDF40079C664 /* PBXTargetDependency */,
-			);
-			name = All;
-			productName = All;
-		};
-		7B99E3CD2199D0DA0024FDBD /* Workaround Carthage Static Folder */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 7B99E3CE2199D0DA0024FDBD /* Build configuration list for PBXAggregateTarget "Workaround Carthage Static Folder" */;
-			buildPhases = (
-				7B99E3D12199D0EB0024FDBD /* ShellScript */,
-			);
-			dependencies = (
-			);
-			name = "Workaround Carthage Static Folder";
-			productName = "Workaround Carthage Static Folder";
-		};
-/* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
 		7B37122C21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */; };
-		7B37122D21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */; };
-		7B37122E21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */; };
-		7B37122F21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */; };
 		7B3DA8FA2013764E00F4BA76 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DA8F92013764E00F4BA76 /* DependencyInjection.swift */; };
-		7B3DA8FB2013764E00F4BA76 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DA8F92013764E00F4BA76 /* DependencyInjection.swift */; };
-		7B3DA8FC2013764E00F4BA76 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DA8F92013764E00F4BA76 /* DependencyInjection.swift */; };
-		7B3DA8FD2013764E00F4BA76 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DA8F92013764E00F4BA76 /* DependencyInjection.swift */; };
 		7B3DA90020137B0E00F4BA76 /* SimpleSemiSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DA8FF20137B0E00F4BA76 /* SimpleSemiSingleton.swift */; };
-		7B3DA90120137B0E00F4BA76 /* SimpleSemiSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DA8FF20137B0E00F4BA76 /* SimpleSemiSingleton.swift */; };
-		7B3DA90220137B0E00F4BA76 /* SimpleSemiSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DA8FF20137B0E00F4BA76 /* SimpleSemiSingleton.swift */; };
-		7B7A34C820027B4700348DF4 /* SemiSingleton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7A34BF20027B4600348DF4 /* SemiSingleton.framework */; };
-		7B7A34D620027B6700348DF4 /* SemiSingletonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* SemiSingletonTests.swift */; };
-		7B7A34D720027B6C00348DF4 /* SemiSingletonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD01320026AF1009BE667 /* SemiSingletonStore.swift */; };
 		7B8BD02320026E8C009BE667 /* SemiSingleton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* SemiSingleton.framework */; };
 		7B8BD036200274B9009BE667 /* SemiSingletonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* SemiSingletonTests.swift */; };
 		7B8BD0372002752A009BE667 /* SemiSingletonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD01320026AF1009BE667 /* SemiSingletonStore.swift */; };
 		7B99E3C32199D0440024FDBD /* RecursiveSyncDispatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B99E3C22199D0440024FDBD /* RecursiveSyncDispatch.framework */; };
-		7B99E3C52199D0540024FDBD /* RecursiveSyncDispatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B99E3C42199D0540024FDBD /* RecursiveSyncDispatch.framework */; };
-		7B99E3C72199D05D0024FDBD /* RecursiveSyncDispatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B99E3C62199D05C0024FDBD /* RecursiveSyncDispatch.framework */; };
-		7B99E3C92199D0660024FDBD /* RecursiveSyncDispatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B99E3C82199D0660024FDBD /* RecursiveSyncDispatch.framework */; };
-		7B99E3CA2199D06F0024FDBD /* RecursiveSyncDispatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B99E3C62199D05C0024FDBD /* RecursiveSyncDispatch.framework */; };
-		7B99E3CB2199D0720024FDBD /* RecursiveSyncDispatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B99E3C42199D0540024FDBD /* RecursiveSyncDispatch.framework */; };
 		7B99E3CC2199D0750024FDBD /* RecursiveSyncDispatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B99E3C22199D0440024FDBD /* RecursiveSyncDispatch.framework */; };
 		7BB4DDA72188815700E6CCF0 /* ReentrantSemiSingletonInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4DDA62188815700E6CCF0 /* ReentrantSemiSingletonInit.swift */; };
-		7BB4DDA82188815700E6CCF0 /* ReentrantSemiSingletonInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4DDA62188815700E6CCF0 /* ReentrantSemiSingletonInit.swift */; };
-		7BB4DDA92188815700E6CCF0 /* ReentrantSemiSingletonInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB4DDA62188815700E6CCF0 /* ReentrantSemiSingletonInit.swift */; };
-		7BB52E4B20027A0E007CAD7B /* SemiSingletonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD01320026AF1009BE667 /* SemiSingletonStore.swift */; };
-		7BC696DE2002775C007BC3E9 /* SemiSingleton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC696D52002775C007BC3E9 /* SemiSingleton.framework */; };
-		7BC696EC200277AA007BC3E9 /* SemiSingletonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* SemiSingletonTests.swift */; };
-		7BC696ED200277AE007BC3E9 /* SemiSingletonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD01320026AF1009BE667 /* SemiSingletonStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7B639D912002CDF40079C664 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
-			remoteInfo = "happnLogger-macOS";
-		};
-		7B639D932002CDF40079C664 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B7A34BE20027B4600348DF4;
-			remoteInfo = "happnLogger-tvOS";
-		};
-		7B639D952002CDF40079C664 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BC696D42002775C007BC3E9;
-			remoteInfo = "happnLogger-iOS";
-		};
-		7B639D972002CDF40079C664 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BB52E42200279EA007CAD7B;
-			remoteInfo = "happnLogger-watchOS";
-		};
-		7B7A34C920027B4700348DF4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B7A34BE20027B4600348DF4;
-			remoteInfo = "happnLogger-tvOS";
-		};
 		7B8BD02420026E8C009BE667 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7B8BD01920026E8C009BE667;
 			remoteInfo = "happnLogger-macOS";
-		};
-		7B99E3D22199D1110024FDBD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B99E3CD2199D0DA0024FDBD;
-			remoteInfo = "Workaround Carthage Static Folder";
-		};
-		7B99E3D42199D1160024FDBD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B99E3CD2199D0DA0024FDBD;
-			remoteInfo = "Workaround Carthage Static Folder";
-		};
-		7B99E3D62199D11B0024FDBD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B99E3CD2199D0DA0024FDBD;
-			remoteInfo = "Workaround Carthage Static Folder";
-		};
-		7B99E3D82199D1200024FDBD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7B99E3CD2199D0DA0024FDBD;
-			remoteInfo = "Workaround Carthage Static Folder";
-		};
-		7BC696DF2002775C007BC3E9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7B661F9320026ACC00486182 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7BC696D42002775C007BC3E9;
-			remoteInfo = "happnLogger-iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -155,12 +35,10 @@
 		7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxStrongToWeakMapTable.swift; sourceTree = "<group>"; };
 		7B3DA8F92013764E00F4BA76 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
 		7B3DA8FF20137B0E00F4BA76 /* SimpleSemiSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSemiSingleton.swift; sourceTree = "<group>"; };
-		7B7A34BF20027B4600348DF4 /* SemiSingleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SemiSingleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B7A34C720027B4700348DF4 /* SemiSingleton-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SemiSingleton-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8BD01320026AF1009BE667 /* SemiSingletonStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemiSingletonStore.swift; sourceTree = "<group>"; };
 		7B8BD01A20026E8C009BE667 /* SemiSingleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SemiSingleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8BD01D20026E8C009BE667 /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
-		7B8BD02220026E8C009BE667 /* SemiSingleton-macOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SemiSingleton-macOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B8BD02220026E8C009BE667 /* SemiSingleton-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SemiSingleton-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8BD02920026E8C009BE667 /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		7B8BD034200274B9009BE667 /* SemiSingletonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemiSingletonTests.swift; sourceTree = "<group>"; };
 		7B99E3BC2199CD870024FDBD /* StaticCarthageBuild.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = StaticCarthageBuild.xcconfig; sourceTree = "<group>"; };
@@ -169,29 +47,9 @@
 		7B99E3C62199D05C0024FDBD /* RecursiveSyncDispatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RecursiveSyncDispatch.framework; sourceTree = "<group>"; };
 		7B99E3C82199D0660024FDBD /* RecursiveSyncDispatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RecursiveSyncDispatch.framework; sourceTree = "<group>"; };
 		7BB4DDA62188815700E6CCF0 /* ReentrantSemiSingletonInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReentrantSemiSingletonInit.swift; sourceTree = "<group>"; };
-		7BB52E43200279EA007CAD7B /* SemiSingleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SemiSingleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BC696D52002775C007BC3E9 /* SemiSingleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SemiSingleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BC696DD2002775C007BC3E9 /* SemiSingleton-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SemiSingleton-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7B7A34BB20027B4600348DF4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B99E3C52199D0540024FDBD /* RecursiveSyncDispatch.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7B7A34C420027B4700348DF4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B99E3CB2199D0720024FDBD /* RecursiveSyncDispatch.framework in Frameworks */,
-				7B7A34C820027B4700348DF4 /* SemiSingleton.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7B8BD01620026E8C009BE667 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -206,31 +64,6 @@
 			files = (
 				7B99E3CC2199D0750024FDBD /* RecursiveSyncDispatch.framework in Frameworks */,
 				7B8BD02320026E8C009BE667 /* SemiSingleton.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BB52E3F200279EA007CAD7B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B99E3C92199D0660024FDBD /* RecursiveSyncDispatch.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BC696D12002775C007BC3E9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B99E3C72199D05D0024FDBD /* RecursiveSyncDispatch.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BC696DA2002775C007BC3E9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B99E3CA2199D06F0024FDBD /* RecursiveSyncDispatch.framework in Frameworks */,
-				7BC696DE2002775C007BC3E9 /* SemiSingleton.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,14 +97,69 @@
 			isa = PBXGroup;
 			children = (
 				7B8BD01A20026E8C009BE667 /* SemiSingleton.framework */,
-				7B8BD02220026E8C009BE667 /* SemiSingleton-macOSTests.xctest */,
-				7B7A34BF20027B4600348DF4 /* SemiSingleton.framework */,
-				7B7A34C720027B4700348DF4 /* SemiSingleton-tvOSTests.xctest */,
-				7BC696D52002775C007BC3E9 /* SemiSingleton.framework */,
-				7BC696DD2002775C007BC3E9 /* SemiSingleton-iOSTests.xctest */,
-				7BB52E43200279EA007CAD7B /* SemiSingleton.framework */,
+				7B8BD02220026E8C009BE667 /* SemiSingleton-Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7B80A9D12236B67A00CECD67 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				7B99E3C22199D0440024FDBD /* RecursiveSyncDispatch.framework */,
+			);
+			name = Dynamic;
+			sourceTree = "<group>";
+		};
+		7B80A9D32236B8A600CECD67 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
+		7B80A9D42236B8D000CECD67 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				7B99E3C42199D0540024FDBD /* RecursiveSyncDispatch.framework */,
+			);
+			name = Dynamic;
+			sourceTree = "<group>";
+		};
+		7B80A9D52236B8DD00CECD67 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				7B99E3C62199D05C0024FDBD /* RecursiveSyncDispatch.framework */,
+			);
+			name = Dynamic;
+			sourceTree = "<group>";
+		};
+		7B80A9D62236B8E400CECD67 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				7B99E3C82199D0660024FDBD /* RecursiveSyncDispatch.framework */,
+			);
+			name = Dynamic;
+			sourceTree = "<group>";
+		};
+		7B80A9D72236B8F200CECD67 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
+		7B80A9D82236B8F900CECD67 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
+		7B80A9D92236B90000CECD67 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Static;
 			sourceTree = "<group>";
 		};
 		7B8BD01120026AF1009BE667 /* Sources */ = {
@@ -334,7 +222,8 @@
 		7B99E3BE2199CFC90024FDBD /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				7B99E3C22199D0440024FDBD /* RecursiveSyncDispatch.framework */,
+				7B80A9D12236B67A00CECD67 /* Dynamic */,
+				7B80A9D32236B8A600CECD67 /* Static */,
 			);
 			name = macOS;
 			path = Mac;
@@ -343,7 +232,8 @@
 		7B99E3BF2199CFD00024FDBD /* tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				7B99E3C42199D0540024FDBD /* RecursiveSyncDispatch.framework */,
+				7B80A9D42236B8D000CECD67 /* Dynamic */,
+				7B80A9D72236B8F200CECD67 /* Static */,
 			);
 			path = tvOS;
 			sourceTree = "<group>";
@@ -351,7 +241,8 @@
 		7B99E3C02199CFED0024FDBD /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				7B99E3C62199D05C0024FDBD /* RecursiveSyncDispatch.framework */,
+				7B80A9D52236B8DD00CECD67 /* Dynamic */,
+				7B80A9D82236B8F900CECD67 /* Static */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -359,7 +250,8 @@
 		7B99E3C12199CFFB0024FDBD /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				7B99E3C82199D0660024FDBD /* RecursiveSyncDispatch.framework */,
+				7B80A9D62236B8E400CECD67 /* Dynamic */,
+				7B80A9D92236B90000CECD67 /* Static */,
 			);
 			path = watchOS;
 			sourceTree = "<group>";
@@ -367,28 +259,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		7B7A34BC20027B4600348DF4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7B8BD01720026E8C009BE667 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BB52E40200279EA007CAD7B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BC696D22002775C007BC3E9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -398,46 +269,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7B7A34BE20027B4600348DF4 /* SemiSingleton-tvOS */ = {
+		7B8BD01920026E8C009BE667 /* SemiSingleton */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B7A34D420027B4700348DF4 /* Build configuration list for PBXNativeTarget "SemiSingleton-tvOS" */;
-			buildPhases = (
-				7B7A34BA20027B4600348DF4 /* Sources */,
-				7B7A34BB20027B4600348DF4 /* Frameworks */,
-				7B7A34BC20027B4600348DF4 /* Headers */,
-				7B7A34BD20027B4600348DF4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7B99E3D52199D1160024FDBD /* PBXTargetDependency */,
-			);
-			name = "SemiSingleton-tvOS";
-			productName = "happnLogger-tvOS";
-			productReference = 7B7A34BF20027B4600348DF4 /* SemiSingleton.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7B7A34C620027B4700348DF4 /* SemiSingleton-tvOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7B7A34D520027B4700348DF4 /* Build configuration list for PBXNativeTarget "SemiSingleton-tvOSTests" */;
-			buildPhases = (
-				7B7A34C320027B4700348DF4 /* Sources */,
-				7B7A34C420027B4700348DF4 /* Frameworks */,
-				7B7A34C520027B4700348DF4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7B7A34CA20027B4700348DF4 /* PBXTargetDependency */,
-			);
-			name = "SemiSingleton-tvOSTests";
-			productName = "happnLogger-tvOSTests";
-			productReference = 7B7A34C720027B4700348DF4 /* SemiSingleton-tvOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		7B8BD01920026E8C009BE667 /* SemiSingleton-macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7B8BD02B20026E8C009BE667 /* Build configuration list for PBXNativeTarget "SemiSingleton-macOS" */;
+			buildConfigurationList = 7B8BD02B20026E8C009BE667 /* Build configuration list for PBXNativeTarget "SemiSingleton" */;
 			buildPhases = (
 				7B8BD01520026E8C009BE667 /* Sources */,
 				7B8BD01620026E8C009BE667 /* Frameworks */,
@@ -447,16 +281,15 @@
 			buildRules = (
 			);
 			dependencies = (
-				7B99E3D32199D1110024FDBD /* PBXTargetDependency */,
 			);
-			name = "SemiSingleton-macOS";
+			name = SemiSingleton;
 			productName = "happnLogger-macOS";
 			productReference = 7B8BD01A20026E8C009BE667 /* SemiSingleton.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7B8BD02120026E8C009BE667 /* SemiSingleton-macOSTests */ = {
+		7B8BD02120026E8C009BE667 /* SemiSingleton-Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7B8BD02E20026E8C009BE667 /* Build configuration list for PBXNativeTarget "SemiSingleton-macOSTests" */;
+			buildConfigurationList = 7B8BD02E20026E8C009BE667 /* Build configuration list for PBXNativeTarget "SemiSingleton-Tests" */;
 			buildPhases = (
 				7B8BD01E20026E8C009BE667 /* Sources */,
 				7B8BD01F20026E8C009BE667 /* Frameworks */,
@@ -467,65 +300,9 @@
 			dependencies = (
 				7B8BD02520026E8C009BE667 /* PBXTargetDependency */,
 			);
-			name = "SemiSingleton-macOSTests";
+			name = "SemiSingleton-Tests";
 			productName = "happnLogger-macOSTests";
-			productReference = 7B8BD02220026E8C009BE667 /* SemiSingleton-macOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		7BB52E42200279EA007CAD7B /* SemiSingleton-watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7BB52E48200279EA007CAD7B /* Build configuration list for PBXNativeTarget "SemiSingleton-watchOS" */;
-			buildPhases = (
-				7BB52E3E200279EA007CAD7B /* Sources */,
-				7BB52E3F200279EA007CAD7B /* Frameworks */,
-				7BB52E40200279EA007CAD7B /* Headers */,
-				7BB52E41200279EA007CAD7B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7B99E3D92199D1200024FDBD /* PBXTargetDependency */,
-			);
-			name = "SemiSingleton-watchOS";
-			productName = "happnLogger-watchOS";
-			productReference = 7BB52E43200279EA007CAD7B /* SemiSingleton.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7BC696D42002775C007BC3E9 /* SemiSingleton-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7BC696E62002775C007BC3E9 /* Build configuration list for PBXNativeTarget "SemiSingleton-iOS" */;
-			buildPhases = (
-				7BC696D02002775C007BC3E9 /* Sources */,
-				7BC696D12002775C007BC3E9 /* Frameworks */,
-				7BC696D22002775C007BC3E9 /* Headers */,
-				7BC696D32002775C007BC3E9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7B99E3D72199D11B0024FDBD /* PBXTargetDependency */,
-			);
-			name = "SemiSingleton-iOS";
-			productName = "happnLogger-iOS";
-			productReference = 7BC696D52002775C007BC3E9 /* SemiSingleton.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7BC696DC2002775C007BC3E9 /* SemiSingleton-iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7BC696E92002775C007BC3E9 /* Build configuration list for PBXNativeTarget "SemiSingleton-iOSTests" */;
-			buildPhases = (
-				7BC696D92002775C007BC3E9 /* Sources */,
-				7BC696DA2002775C007BC3E9 /* Frameworks */,
-				7BC696DB2002775C007BC3E9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7BC696E02002775C007BC3E9 /* PBXTargetDependency */,
-			);
-			name = "SemiSingleton-iOSTests";
-			productName = "happnLogger-iOSTests";
-			productReference = 7BC696DD2002775C007BC3E9 /* SemiSingleton-iOSTests.xctest */;
+			productReference = 7B8BD02220026E8C009BE667 /* SemiSingleton-Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -538,20 +315,6 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = happn;
 				TargetAttributes = {
-					7B639D8D2002CDE70079C664 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
-					};
-					7B7A34BE20027B4600348DF4 = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
-						ProvisioningStyle = Automatic;
-					};
-					7B7A34C620027B4700348DF4 = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
-						ProvisioningStyle = Automatic;
-					};
 					7B8BD01920026E8C009BE667 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1000;
@@ -560,24 +323,6 @@
 					7B8BD02120026E8C009BE667 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1000;
-						ProvisioningStyle = Automatic;
-					};
-					7B99E3CD2199D0DA0024FDBD = {
-						CreatedOnToolsVersion = 10.1;
-					};
-					7BB52E42200279EA007CAD7B = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
-						ProvisioningStyle = Automatic;
-					};
-					7BC696D42002775C007BC3E9 = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
-						ProvisioningStyle = Automatic;
-					};
-					7BC696DC2002775C007BC3E9 = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -594,34 +339,13 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7B639D8D2002CDE70079C664 /* All */,
-				7B99E3CD2199D0DA0024FDBD /* Workaround Carthage Static Folder */,
-				7B8BD01920026E8C009BE667 /* SemiSingleton-macOS */,
-				7B7A34BE20027B4600348DF4 /* SemiSingleton-tvOS */,
-				7BC696D42002775C007BC3E9 /* SemiSingleton-iOS */,
-				7BB52E42200279EA007CAD7B /* SemiSingleton-watchOS */,
-				7B8BD02120026E8C009BE667 /* SemiSingleton-macOSTests */,
-				7BC696DC2002775C007BC3E9 /* SemiSingleton-iOSTests */,
-				7B7A34C620027B4700348DF4 /* SemiSingleton-tvOSTests */,
+				7B8BD01920026E8C009BE667 /* SemiSingleton */,
+				7B8BD02120026E8C009BE667 /* SemiSingleton-Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7B7A34BD20027B4600348DF4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7B7A34C520027B4700348DF4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7B8BD01820026E8C009BE667 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -636,72 +360,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BB52E41200279EA007CAD7B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BC696D32002775C007BC3E9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BC696DB2002775C007BC3E9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		7B99E3D12199D0EB0024FDBD /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"$(SRCROOT)/Carthage/$(FL_WORKAROUND_CARTHAGE_FOLDER_NAME)FolderWorkaroundInput.xcfilelist",
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-				"$(SRCROOT)/Carthage/$(FL_WORKAROUND_CARTHAGE_FOLDER_NAME)FolderWorkaroundOutput.xcfilelist",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Link (ln) static Frameworks generated by Carthage in the “Static” folder\n# to the root Carthage folder\n\"$SRCROOT/Scripts/carthage_workaround_static_folder.sh\" \"$FL_WORKAROUND_CARTHAGE_FOLDER_NAME\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		7B7A34BA20027B4600348DF4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B3DA8FB2013764E00F4BA76 /* DependencyInjection.swift in Sources */,
-				7B7A34D720027B6C00348DF4 /* SemiSingletonStore.swift in Sources */,
-				7B37122D21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7B7A34C320027B4700348DF4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B7A34D620027B6700348DF4 /* SemiSingletonTests.swift in Sources */,
-				7BB4DDA92188815700E6CCF0 /* ReentrantSemiSingletonInit.swift in Sources */,
-				7B3DA90220137B0E00F4BA76 /* SimpleSemiSingleton.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7B8BD01520026E8C009BE667 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -722,111 +383,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BB52E3E200279EA007CAD7B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B3DA8FD2013764E00F4BA76 /* DependencyInjection.swift in Sources */,
-				7BB52E4B20027A0E007CAD7B /* SemiSingletonStore.swift in Sources */,
-				7B37122F21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BC696D02002775C007BC3E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B3DA8FC2013764E00F4BA76 /* DependencyInjection.swift in Sources */,
-				7BC696ED200277AE007BC3E9 /* SemiSingletonStore.swift in Sources */,
-				7B37122E21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BC696D92002775C007BC3E9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7BC696EC200277AA007BC3E9 /* SemiSingletonTests.swift in Sources */,
-				7BB4DDA82188815700E6CCF0 /* ReentrantSemiSingletonInit.swift in Sources */,
-				7B3DA90120137B0E00F4BA76 /* SimpleSemiSingleton.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7B639D922002CDF40079C664 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7B8BD01920026E8C009BE667 /* SemiSingleton-macOS */;
-			targetProxy = 7B639D912002CDF40079C664 /* PBXContainerItemProxy */;
-		};
-		7B639D942002CDF40079C664 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7B7A34BE20027B4600348DF4 /* SemiSingleton-tvOS */;
-			targetProxy = 7B639D932002CDF40079C664 /* PBXContainerItemProxy */;
-		};
-		7B639D962002CDF40079C664 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7BC696D42002775C007BC3E9 /* SemiSingleton-iOS */;
-			targetProxy = 7B639D952002CDF40079C664 /* PBXContainerItemProxy */;
-		};
-		7B639D982002CDF40079C664 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7BB52E42200279EA007CAD7B /* SemiSingleton-watchOS */;
-			targetProxy = 7B639D972002CDF40079C664 /* PBXContainerItemProxy */;
-		};
-		7B7A34CA20027B4700348DF4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7B7A34BE20027B4600348DF4 /* SemiSingleton-tvOS */;
-			targetProxy = 7B7A34C920027B4700348DF4 /* PBXContainerItemProxy */;
-		};
 		7B8BD02520026E8C009BE667 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7B8BD01920026E8C009BE667 /* SemiSingleton-macOS */;
+			target = 7B8BD01920026E8C009BE667 /* SemiSingleton */;
 			targetProxy = 7B8BD02420026E8C009BE667 /* PBXContainerItemProxy */;
-		};
-		7B99E3D32199D1110024FDBD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7B99E3CD2199D0DA0024FDBD /* Workaround Carthage Static Folder */;
-			targetProxy = 7B99E3D22199D1110024FDBD /* PBXContainerItemProxy */;
-		};
-		7B99E3D52199D1160024FDBD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7B99E3CD2199D0DA0024FDBD /* Workaround Carthage Static Folder */;
-			targetProxy = 7B99E3D42199D1160024FDBD /* PBXContainerItemProxy */;
-		};
-		7B99E3D72199D11B0024FDBD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7B99E3CD2199D0DA0024FDBD /* Workaround Carthage Static Folder */;
-			targetProxy = 7B99E3D62199D11B0024FDBD /* PBXContainerItemProxy */;
-		};
-		7B99E3D92199D1200024FDBD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7B99E3CD2199D0DA0024FDBD /* Workaround Carthage Static Folder */;
-			targetProxy = 7B99E3D82199D1200024FDBD /* PBXContainerItemProxy */;
-		};
-		7BC696E02002775C007BC3E9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7BC696D42002775C007BC3E9 /* SemiSingleton-iOS */;
-			targetProxy = 7BC696DF2002775C007BC3E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		7B639D8E2002CDE70079C664 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		7B639D8F2002CDE70079C664 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		7B661FA220026ACC00486182 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -858,10 +425,16 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -876,13 +449,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = "";
+				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -918,10 +497,16 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 2;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
 				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -930,134 +515,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = "";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		7B7A34D020027B4700348DF4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
-				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-tvOS";
-				PRODUCT_NAME = SemiSingleton;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7B7A34D120027B4700348DF4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
-				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-tvOS";
-				PRODUCT_NAME = SemiSingleton;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7B7A34D220027B4700348DF4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-			};
-			name = Debug;
-		};
-		7B7A34D320027B4700348DF4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-tvOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = appletvos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
 		};
@@ -1066,33 +536,39 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletvsimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
+				"FRAMEWORK_SEARCH_PATHS[sdk=watchos*]" = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-macOS";
+				"FRAMEWORK_SEARCH_PATHS[sdk=watchsimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.happn.SemiSingleton;
 				PRODUCT_NAME = SemiSingleton;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -1101,32 +577,39 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 2;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletvsimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
+				"FRAMEWORK_SEARCH_PATHS[sdk=watchos*]" = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-macOS";
+				"FRAMEWORK_SEARCH_PATHS[sdk=watchsimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.happn.SemiSingleton;
 				PRODUCT_NAME = SemiSingleton;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SWIFT_VERSION = 4.2;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -1136,23 +619,44 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletvsimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
+				"FRAMEWORK_SEARCH_PATHS[sdk=watchos*]" = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-macOSTests";
+				"FRAMEWORK_SEARCH_PATHS[sdk=watchsimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
+				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=appletvos*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/tvOS";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=appletvsimulator*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/tvOS";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Carthage/Build/Mac";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=watchos*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/watchOS";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=watchsimulator*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -1162,238 +666,50 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletvsimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-macOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Release;
-		};
-		7B99E3CF2199D0DA0024FDBD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		7B99E3D02199D0DA0024FDBD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		7BB52E49200279EA007CAD7B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
+				"FRAMEWORK_SEARCH_PATHS[sdk=watchos*]" = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-watchOS";
-				PRODUCT_NAME = SemiSingleton;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7BB52E4A200279EA007CAD7B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
+				"FRAMEWORK_SEARCH_PATHS[sdk=watchsimulator*]" = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-watchOS";
-				PRODUCT_NAME = SemiSingleton;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 4;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7BC696E72002775C007BC3E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-iOS";
-				PRODUCT_NAME = SemiSingleton;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7BC696E82002775C007BC3E9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = "$(CURRENT_PROJECT_VERSION)";
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-iOS";
-				PRODUCT_NAME = SemiSingleton;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7BC696EA2002775C007BC3E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-iOSTests";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=appletvos*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/tvOS";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=appletvsimulator*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/tvOS";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks $(PROJECT_DIR)/Carthage/Build/Mac";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=watchos*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/watchOS";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=watchsimulator*]" = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-			};
-			name = Debug;
-		};
-		7BC696EB2002775C007BC3E9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = "Xcode Supporting Files/Test-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.happn.SemiSingleton-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7B639D902002CDE70079C664 /* Build configuration list for PBXAggregateTarget "All" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7B639D8E2002CDE70079C664 /* Debug */,
-				7B639D8F2002CDE70079C664 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		7B661F9620026ACC00486182 /* Build configuration list for PBXProject "SemiSingleton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1403,25 +719,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B7A34D420027B4700348DF4 /* Build configuration list for PBXNativeTarget "SemiSingleton-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7B7A34D020027B4700348DF4 /* Debug */,
-				7B7A34D120027B4700348DF4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7B7A34D520027B4700348DF4 /* Build configuration list for PBXNativeTarget "SemiSingleton-tvOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7B7A34D220027B4700348DF4 /* Debug */,
-				7B7A34D320027B4700348DF4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7B8BD02B20026E8C009BE667 /* Build configuration list for PBXNativeTarget "SemiSingleton-macOS" */ = {
+		7B8BD02B20026E8C009BE667 /* Build configuration list for PBXNativeTarget "SemiSingleton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B8BD02C20026E8C009BE667 /* Debug */,
@@ -1430,47 +728,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7B8BD02E20026E8C009BE667 /* Build configuration list for PBXNativeTarget "SemiSingleton-macOSTests" */ = {
+		7B8BD02E20026E8C009BE667 /* Build configuration list for PBXNativeTarget "SemiSingleton-Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7B8BD02F20026E8C009BE667 /* Debug */,
 				7B8BD03020026E8C009BE667 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7B99E3CE2199D0DA0024FDBD /* Build configuration list for PBXAggregateTarget "Workaround Carthage Static Folder" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7B99E3CF2199D0DA0024FDBD /* Debug */,
-				7B99E3D02199D0DA0024FDBD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7BB52E48200279EA007CAD7B /* Build configuration list for PBXNativeTarget "SemiSingleton-watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7BB52E49200279EA007CAD7B /* Debug */,
-				7BB52E4A200279EA007CAD7B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7BC696E62002775C007BC3E9 /* Build configuration list for PBXNativeTarget "SemiSingleton-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7BC696E72002775C007BC3E9 /* Debug */,
-				7BC696E82002775C007BC3E9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7BC696E92002775C007BC3E9 /* Build configuration list for PBXNativeTarget "SemiSingleton-iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7BC696EA2002775C007BC3E9 /* Debug */,
-				7BC696EB2002775C007BC3E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

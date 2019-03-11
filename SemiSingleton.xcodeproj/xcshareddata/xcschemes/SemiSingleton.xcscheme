@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B7A34BE20027B4600348DF4"
+               BlueprintIdentifier = "7B8BD01920026E8C009BE667"
                BuildableName = "SemiSingleton.framework"
-               BlueprintName = "SemiSingleton-tvOS"
+               BlueprintName = "SemiSingleton"
                ReferencedContainer = "container:SemiSingleton.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7B7A34C620027B4700348DF4"
-               BuildableName = "SemiSingleton-tvOSTests.xctest"
-               BlueprintName = "SemiSingleton-tvOSTests"
+               BlueprintIdentifier = "7B8BD02120026E8C009BE667"
+               BuildableName = "SemiSingleton-Tests.xctest"
+               BlueprintName = "SemiSingleton-Tests"
                ReferencedContainer = "container:SemiSingleton.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B7A34BE20027B4600348DF4"
+            BlueprintIdentifier = "7B8BD01920026E8C009BE667"
             BuildableName = "SemiSingleton.framework"
-            BlueprintName = "SemiSingleton-tvOS"
+            BlueprintName = "SemiSingleton"
             ReferencedContainer = "container:SemiSingleton.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B7A34BE20027B4600348DF4"
+            BlueprintIdentifier = "7B8BD01920026E8C009BE667"
             BuildableName = "SemiSingleton.framework"
-            BlueprintName = "SemiSingleton-tvOS"
+            BlueprintName = "SemiSingleton"
             ReferencedContainer = "container:SemiSingleton.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "7B7A34BE20027B4600348DF4"
+            BlueprintIdentifier = "7B8BD01920026E8C009BE667"
             BuildableName = "SemiSingleton.framework"
-            BlueprintName = "SemiSingleton-tvOS"
+            BlueprintName = "SemiSingleton"
             ReferencedContainer = "container:SemiSingleton.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

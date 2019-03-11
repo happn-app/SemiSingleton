@@ -1,5 +1,0 @@
-# Static, Carthage-generated frameworks
-$(SRCROOT)/Carthage/Build/Mac/Static/RecursiveSyncDispatch.framework
-$(SRCROOT)/Carthage/Build/iOS/Static/RecursiveSyncDispatch.framework
-$(SRCROOT)/Carthage/Build/tvOS/Static/RecursiveSyncDispatch.framework
-$(SRCROOT)/Carthage/Build/watchOS/Static/RecursiveSyncDispatch.framework

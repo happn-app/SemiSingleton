@@ -1,5 +1,0 @@
-# Links to actual Carthage-generated frameworks
-$(SRCROOT)/Carthage/Build/Mac/RecursiveSyncDispatch.framework
-$(SRCROOT)/Carthage/Build/iOS/RecursiveSyncDispatch.framework
-$(SRCROOT)/Carthage/Build/tvOS/RecursiveSyncDispatch.framework
-$(SRCROOT)/Carthage/Build/watchOS/RecursiveSyncDispatch.framework

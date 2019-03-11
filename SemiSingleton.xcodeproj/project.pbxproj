@@ -10,6 +10,9 @@
 		7B37122C21028926000E6124 /* LinuxStrongToWeakMapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */; };
 		7B3DA8FA2013764E00F4BA76 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DA8F92013764E00F4BA76 /* DependencyInjection.swift */; };
 		7B3DA90020137B0E00F4BA76 /* SimpleSemiSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DA8FF20137B0E00F4BA76 /* SimpleSemiSingleton.swift */; };
+		7B80A9E32236CD6100CECD67 /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3DA8F92013764E00F4BA76 /* DependencyInjection.swift */; };
+		7B80A9E42236CD6100CECD67 /* SemiSingletonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD01320026AF1009BE667 /* SemiSingletonStore.swift */; };
+		7B80A9E52236CD6100CECD67 /* LinuxStrongToWeakMapTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */; };
 		7B8BD02320026E8C009BE667 /* SemiSingleton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8BD01A20026E8C009BE667 /* SemiSingleton.framework */; };
 		7B8BD036200274B9009BE667 /* SemiSingletonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD034200274B9009BE667 /* SemiSingletonTests.swift */; };
 		7B8BD0372002752A009BE667 /* SemiSingletonStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8BD01320026AF1009BE667 /* SemiSingletonStore.swift */; };
@@ -35,6 +38,11 @@
 		7B37122B21028926000E6124 /* LinuxStrongToWeakMapTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxStrongToWeakMapTable.swift; sourceTree = "<group>"; };
 		7B3DA8F92013764E00F4BA76 /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
 		7B3DA8FF20137B0E00F4BA76 /* SimpleSemiSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSemiSingleton.swift; sourceTree = "<group>"; };
+		7B80A9DD2236CD3100CECD67 /* RecursiveSyncDispatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RecursiveSyncDispatch.framework; sourceTree = "<group>"; };
+		7B80A9DE2236CD3E00CECD67 /* RecursiveSyncDispatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RecursiveSyncDispatch.framework; sourceTree = "<group>"; };
+		7B80A9DF2236CD4E00CECD67 /* RecursiveSyncDispatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RecursiveSyncDispatch.framework; sourceTree = "<group>"; };
+		7B80A9E02236CD5B00CECD67 /* RecursiveSyncDispatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RecursiveSyncDispatch.framework; sourceTree = "<group>"; };
+		7B80A9ED2236CD6100CECD67 /* SemiSingleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SemiSingleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8BD01320026AF1009BE667 /* SemiSingletonStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SemiSingletonStore.swift; sourceTree = "<group>"; };
 		7B8BD01A20026E8C009BE667 /* SemiSingleton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SemiSingleton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8BD01D20026E8C009BE667 /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
@@ -50,6 +58,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7B80A9E62236CD6100CECD67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B8BD01620026E8C009BE667 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,6 +113,7 @@
 			children = (
 				7B8BD01A20026E8C009BE667 /* SemiSingleton.framework */,
 				7B8BD02220026E8C009BE667 /* SemiSingleton-Tests.xctest */,
+				7B80A9ED2236CD6100CECD67 /* SemiSingleton.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,6 +129,7 @@
 		7B80A9D32236B8A600CECD67 /* Static */ = {
 			isa = PBXGroup;
 			children = (
+				7B80A9DD2236CD3100CECD67 /* RecursiveSyncDispatch.framework */,
 			);
 			path = Static;
 			sourceTree = "<group>";
@@ -144,6 +161,7 @@
 		7B80A9D72236B8F200CECD67 /* Static */ = {
 			isa = PBXGroup;
 			children = (
+				7B80A9DE2236CD3E00CECD67 /* RecursiveSyncDispatch.framework */,
 			);
 			path = Static;
 			sourceTree = "<group>";
@@ -151,6 +169,7 @@
 		7B80A9D82236B8F900CECD67 /* Static */ = {
 			isa = PBXGroup;
 			children = (
+				7B80A9DF2236CD4E00CECD67 /* RecursiveSyncDispatch.framework */,
 			);
 			path = Static;
 			sourceTree = "<group>";
@@ -158,6 +177,7 @@
 		7B80A9D92236B90000CECD67 /* Static */ = {
 			isa = PBXGroup;
 			children = (
+				7B80A9E02236CD5B00CECD67 /* RecursiveSyncDispatch.framework */,
 			);
 			path = Static;
 			sourceTree = "<group>";
@@ -259,6 +279,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		7B80A9E82236CD6100CECD67 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B8BD01720026E8C009BE667 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,6 +296,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7B80A9E12236CD6100CECD67 /* SemiSingleton-Static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B80A9EA2236CD6100CECD67 /* Build configuration list for PBXNativeTarget "SemiSingleton-Static" */;
+			buildPhases = (
+				7B80A9E22236CD6100CECD67 /* Sources */,
+				7B80A9E62236CD6100CECD67 /* Frameworks */,
+				7B80A9E82236CD6100CECD67 /* Headers */,
+				7B80A9E92236CD6100CECD67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SemiSingleton-Static";
+			productName = "happnLogger-macOS";
+			productReference = 7B80A9ED2236CD6100CECD67 /* SemiSingleton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		7B8BD01920026E8C009BE667 /* SemiSingleton */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7B8BD02B20026E8C009BE667 /* Build configuration list for PBXNativeTarget "SemiSingleton" */;
@@ -315,6 +360,9 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = happn;
 				TargetAttributes = {
+					7B80A9E12236CD6100CECD67 = {
+						ProvisioningStyle = Automatic;
+					};
 					7B8BD01920026E8C009BE667 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 1000;
@@ -340,12 +388,20 @@
 			projectRoot = "";
 			targets = (
 				7B8BD01920026E8C009BE667 /* SemiSingleton */,
+				7B80A9E12236CD6100CECD67 /* SemiSingleton-Static */,
 				7B8BD02120026E8C009BE667 /* SemiSingleton-Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7B80A9E92236CD6100CECD67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B8BD01820026E8C009BE667 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,6 +419,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7B80A9E22236CD6100CECD67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B80A9E32236CD6100CECD67 /* DependencyInjection.swift in Sources */,
+				7B80A9E42236CD6100CECD67 /* SemiSingletonStore.swift in Sources */,
+				7B80A9E52236CD6100CECD67 /* LinuxStrongToWeakMapTable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7B8BD01520026E8C009BE667 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -528,6 +594,86 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		7B80A9EB2236CD6100CECD67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS/Static",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletvsimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS/Static",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac/Static",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=watchos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS/Static",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=watchsimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS/Static",
+				);
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.happn.SemiSingleton;
+				PRODUCT_NAME = SemiSingleton;
+			};
+			name = Debug;
+		};
+		7B80A9EC2236CD6100CECD67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletvos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS/Static",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=appletvsimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS/Static",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=iphonesimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/Static",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac/Static",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=watchos*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS/Static",
+				);
+				"FRAMEWORK_SEARCH_PATHS[sdk=watchsimulator*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS/Static",
+				);
+				INFOPLIST_FILE = "Xcode Supporting Files/Framework-Info.plist";
+				MACH_O_TYPE = staticlib;
+				PRODUCT_BUNDLE_IDENTIFIER = com.happn.SemiSingleton;
+				PRODUCT_NAME = SemiSingleton;
 			};
 			name = Release;
 		};
@@ -715,6 +861,15 @@
 			buildConfigurations = (
 				7B661FA220026ACC00486182 /* Debug */,
 				7B661FA320026ACC00486182 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B80A9EA2236CD6100CECD67 /* Build configuration list for PBXNativeTarget "SemiSingleton-Static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B80A9EB2236CD6100CECD67 /* Debug */,
+				7B80A9EC2236CD6100CECD67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

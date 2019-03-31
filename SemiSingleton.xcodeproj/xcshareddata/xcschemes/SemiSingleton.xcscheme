@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7B8BD02120026E8C009BE667"
-               BuildableName = "SemiSingleton-Tests.xctest"
-               BlueprintName = "SemiSingleton-Tests"
+               BuildableName = "SemiSingletonTests.xctest"
+               BlueprintName = "SemiSingletonTests"
                ReferencedContainer = "container:SemiSingleton.xcodeproj">
             </BuildableReference>
          </TestableReference>

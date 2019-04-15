@@ -204,7 +204,7 @@ public class SemiSingletonStore {
 	}
 	
 	/* ***************
-      MARK: - Private
+	   MARK: - Private
 	   *************** */
 	
 	private class StoreKey : NSObject {

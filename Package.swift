@@ -1,4 +1,4 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.1
 import PackageDescription
 
 
@@ -8,11 +8,14 @@ let package = Package(
 		.library(name: "SemiSingleton", targets: ["SemiSingleton"]),
 	],
 	dependencies: [
-		.package(url: "https://github.com/happn-tech/DummyLinuxOSLog.git", from: "1.0.1"),
+		.package(url: "https://github.com/apple/swift-log.git", from: "1.2.0"),
 		.package(url: "https://github.com/happn-tech/RecursiveSyncDispatch.git", from: "1.0.0")
 	],
 	targets: [
-		.target(name: "SemiSingleton", dependencies: ["DummyLinuxOSLog", "RecursiveSyncDispatch"]),
+		.target(name: "SemiSingleton", dependencies: [
+			.product(name: "Logging", package: "swift-log"),
+			.product(name: "RecursiveSyncDispatch", package: "RecursiveSyncDispatch")
+		]),
 		.testTarget(name: "SemiSingletonTests", dependencies: ["SemiSingleton"])
 	]
 )

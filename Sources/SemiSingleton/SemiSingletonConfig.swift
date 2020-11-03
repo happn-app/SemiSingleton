@@ -60,4 +60,7 @@ public struct SemiSingletonConfig {
 		return Logger(label: "com.happn.SemiSingleton")
 	}()
 	
+	/** This struct is simply a container for static configuration properties. */
+	private init() {}
+	
 }

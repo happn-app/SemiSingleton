@@ -57,3 +57,5 @@ public struct SemiSingletonConfig {
 	private init() {}
 	
 }
+
+typealias Conf = SemiSingletonConfig

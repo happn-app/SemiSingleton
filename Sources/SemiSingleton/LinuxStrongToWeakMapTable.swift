@@ -19,8 +19,9 @@ import Foundation
 
 #if os(Linux)
 
-/** Unsafe class (not fully tested, not fully documented). Do not use outside of
-the SemiSingleton project! */
+/**
+ Unsafe class (not fully tested, not fully documented).
+ Do not use outside of the SemiSingleton project! */
 class LinuxStrongToWeakMapTable<KeyType : Hashable, ObjectType : AnyObject> {
 	
 	func object(forKey key: KeyType) -> ObjectType? {

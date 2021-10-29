@@ -15,47 +15,44 @@ limitations under the License. */
 
 import Foundation
 #if canImport(os)
-	import os.log
+import os.log
 #endif
 
-#if !canImport(os) && canImport(DummyLinuxOSLog)
-	import DummyLinuxOSLog
-#endif
 import RecursiveSyncDispatch
 
 
 
-public protocol SemiSingleton : class {
+public protocol SemiSingleton : AnyObject {
 	
 	associatedtype SemiSingletonKey : Hashable
 	associatedtype SemiSingletonAdditionalInitInfo
 	
 	/** Init a semi-singleton instance.
-	
-	You can use the additional info to help initializing your instance. The store
-	is given for informational purposes, mainly so you can instantiate other
-	semi-singletons from the same store.
-	
-	This init method cannot fail. If you want to create a semi-singleton whose
-	initialization can fail, you should conform to the
-	`SemiSingletonWithFallibleInit` protocol. */
+	 
+	 You can use the additional info to help initializing your instance. The store
+	 is given for informational purposes, mainly so you can instantiate other
+	 semi-singletons from the same store.
+	 
+	 This init method cannot fail. If you want to create a semi-singleton whose
+	 initialization can fail, you should conform to the
+	 `SemiSingletonWithFallibleInit` protocol. */
 	init(key: SemiSingletonKey, additionalInfo: SemiSingletonAdditionalInitInfo, store: SemiSingletonStore)
 	
 }
 
-public protocol SemiSingletonWithFallibleInit : class {
+public protocol SemiSingletonWithFallibleInit : AnyObject {
 	
 	associatedtype SemiSingletonKey : Hashable
 	associatedtype SemiSingletonAdditionalInitInfo
 	
 	/** Init a semi-singleton instance.
-	
-	You can use the additional info to help initializing your instance. The store
-	is given for informational purposes, mainly so you can instantiate other
-	semi-singletons from the same store.
-	
-	This init method cann fail. If you create a semi-singleton whose init cannot
-	fail, you should consider conforming to `SemiSingleton` instead. */
+	 
+	 You can use the additional info to help initializing your instance. The store
+	 is given for informational purposes, mainly so you can instantiate other
+	 semi-singletons from the same store.
+	 
+	 This init method cann fail. If you create a semi-singleton whose init cannot
+	 fail, you should consider conforming to `SemiSingleton` instead. */
 	init(key: SemiSingletonKey, additionalInfo: SemiSingletonAdditionalInitInfo, store: SemiSingletonStore) throws
 	
 }
@@ -78,14 +75,13 @@ public class SemiSingletonStore {
 	}
 	
 	/* ************
-	   MARK: - Core
-	   ************ */
+	   MARK: - Core
+	   ************ */
 	
-	/* This method is duplicated below in a throwable version. One key difference
-	 * is about re-entrant SemiSingleton init.
-	 * In the throwable version, instantiating a semi-singleton with the same key
-	 * as another semi-singleton being inited will result in the init throwing.
-	 * In the non-throwable version you’ll get a fatal error. */
+	/* This method is duplicated below in a throwable version.
+	 * One key difference is about re-entrant SemiSingleton init.
+	 * In the throwable version, instantiating a semi-singleton with the same key as another semi-singleton being inited will result in the init throwing.
+	 * In the non-throwable version you’ll get a fatal error. */
 	public func semiSingleton<O : SemiSingleton>(forKey k: O.SemiSingletonKey, additionalInitInfo: O.SemiSingletonAdditionalInitInfo, isNew: inout Bool) -> O {
 		return retrievingQueue.recursiveSync{
 			let key = StoreKey(key: k, objectType: forceClassInKeys ? O.self : nil)
@@ -95,12 +91,11 @@ public class SemiSingletonStore {
 			if let ro = registeredObjects.object(forKey: key) {
 				/* An object has been registered for the given key */
 				guard let o = ro as? O else {
-					/* Invalid type found. We do not un-register the previous object,
-					 * we simply return a non-singleton... */
-					#if canImport(os)
+					/* Invalid type found. We do not un-register the previous object, we simply return a non-singleton… */
+#if canImport(os)
 					if #available(macOS 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
 						SemiSingletonConfig.oslog.flatMap{ os_log("Asked to retrieve an object of type %{public}@ for key %@, but registered object is of type %{public}@. Creating a new, non-singleton’d object of required type. For reference, registered object is %@", log: $0, type: .error, String(describing: O.self), String(describing: k), String(describing: type(of: ro)), String(describing: ro)) }}
-					#endif
+#endif
 					SemiSingletonConfig.logger?.error("Asked to retrieve an object of type \(String(describing: O.self)) for key \(String(describing: k)), but registered object is of type \(String(describing: type(of: ro))). Creating a new, non-singleton’d object of required type. For reference, registered object is \(String(describing: ro))")
 					assert(!forceClassInKeys)
 					
@@ -119,11 +114,10 @@ public class SemiSingletonStore {
 		}
 	}
 	
-	/* This method is duplicated above in a non-throwable version. One key
-	 * difference is about re-entrant SemiSingleton init.
-	 * In the throwable version, instantiating a semi-singleton with the same key
-	 * as another semi-singleton being inited will result in the init throwing.
-	 * In the non-throwable version you’ll get a fatal error. */
+	/* This method is duplicated above in a non-throwable version.
+	 * One key difference is about re-entrant SemiSingleton init.
+	 * In the throwable version, instantiating a semi-singleton with the same key as another semi-singleton being inited will result in the init throwing.
+	 * In the non-throwable version you’ll get a fatal error. */
 	public func semiSingleton<O : SemiSingletonWithFallibleInit>(forKey k: O.SemiSingletonKey, additionalInitInfo: O.SemiSingletonAdditionalInitInfo, isNew: inout Bool) throws -> O {
 		return try retrievingQueue.recursiveSync{
 			let key = StoreKey(key: k, objectType: forceClassInKeys ? O.self : nil)
@@ -133,12 +127,11 @@ public class SemiSingletonStore {
 			if let ro = registeredObjects.object(forKey: key) {
 				/* An object has been registered for the given key */
 				guard let o = ro as? O else {
-					/* Invalid type found. We do not un-register the previous object,
-					 * we simply return a non-singleton... */
-					#if canImport(os)
+					/* Invalid type found. We do not un-register the previous object, we simply return a non-singleton… */
+#if canImport(os)
 					if #available(macOS 10.12, tvOS 10.0, iOS 10.0, watchOS 3.0, *) {
 						SemiSingletonConfig.oslog.flatMap{ os_log("Asked to retrieve an object of type %{public}@ for key %@, but registered object is of type %{public}@. Creating a new, non-singleton’d object of required type. For reference, registered object is %@", log: $0, type: .error, String(describing: O.self), String(describing: k), String(describing: type(of: ro)), String(describing: ro)) }}
-					#endif
+#endif
 					SemiSingletonConfig.logger?.error("Asked to retrieve an object of type \(String(describing: O.self)) for key \(String(describing: k)), but registered object is of type \(String(describing: type(of: ro))). Creating a new, non-singleton’d object of required type. For reference, registered object is \(String(describing: ro))")
 					assert(!forceClassInKeys)
 					
@@ -172,8 +165,8 @@ public class SemiSingletonStore {
 	}
 	
 	/* ********************
-	   MARK: - Conveniences
-	   ******************** */
+	   MARK: - Conveniences
+	   ******************** */
 	
 	public func semiSingleton<O : SemiSingleton>(forKey k: O.SemiSingletonKey, additionalInitInfo: O.SemiSingletonAdditionalInitInfo) -> O {
 		var isNew = false
@@ -202,8 +195,8 @@ public class SemiSingletonStore {
 	}
 	
 	/* ***************
-	   MARK: - Private
-	   *************** */
+	   MARK: - Private
+	   *************** */
 	
 	private class StoreKey : NSObject {
 		
@@ -230,11 +223,11 @@ public class SemiSingletonStore {
 		
 	}
 	
-	#if !os(Linux)
-		private var registeredObjects = NSMapTable<StoreKey, AnyObject>.strongToWeakObjects()
-	#else
-		private var registeredObjects = LinuxStrongToWeakMapTable<StoreKey, AnyObject>()
-	#endif
+#if !os(Linux)
+	private var registeredObjects = NSMapTable<StoreKey, AnyObject>.strongToWeakObjects()
+#else
+	private var registeredObjects = LinuxStrongToWeakMapTable<StoreKey, AnyObject>()
+#endif
 	private let retrievingQueue = DispatchQueue(label: "SemiSingletonStore Object Retrieving Queue", qos: .userInitiated)
 	
 	private var ongoingInitKeys = Set<AnyHashable>()

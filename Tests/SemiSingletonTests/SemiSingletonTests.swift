@@ -39,19 +39,19 @@ class SemiSingletonTests: XCTestCase {
 	}
 	
 	func testSimpleSemiSingletonDeallocationAutoreleasePool() {
-		#if !canImport(ObjectiveC)
-			NSLog("Test unavailable on this OS.")
-		#else
-			let key = #function
-			let semiSingletonStore = SemiSingletonStore(forceClassInKeys: true)
-			XCTAssert(semiSingletonStore.registeredSemiSingleton(forKey: key) as SimpleSemiSingleton? == nil)
-			autoreleasepool{
-				let s: SimpleSemiSingleton = semiSingletonStore.semiSingleton(forKey: key)
-				XCTAssert(semiSingletonStore.registeredSemiSingleton(forKey: key) as SimpleSemiSingleton? === s)
-				XCTAssertEqual(s.key, key)
-			}
-			XCTAssert(semiSingletonStore.registeredSemiSingleton(forKey: key) as SimpleSemiSingleton? == nil)
-		#endif
+#if !canImport(ObjectiveC)
+		NSLog("Test unavailable on this OS.")
+#else
+		let key = #function
+		let semiSingletonStore = SemiSingletonStore(forceClassInKeys: true)
+		XCTAssert(semiSingletonStore.registeredSemiSingleton(forKey: key) as SimpleSemiSingleton? == nil)
+		autoreleasepool{
+			let s: SimpleSemiSingleton = semiSingletonStore.semiSingleton(forKey: key)
+			XCTAssert(semiSingletonStore.registeredSemiSingleton(forKey: key) as SimpleSemiSingleton? === s)
+			XCTAssertEqual(s.key, key)
+		}
+		XCTAssert(semiSingletonStore.registeredSemiSingleton(forKey: key) as SimpleSemiSingleton? == nil)
+#endif
 	}
 	
 	func testSimpleSemiSingletonDeallocationAsyncDispatch() {

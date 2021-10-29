@@ -48,12 +48,12 @@ class ReentrantSemiSingletonInit : SemiSingletonWithFallibleInit {
 		
 		let otherKey = key + " other key"
 		switch additionalInfo {
-		case .noNewAllocation: ()
-		case .otherClass:        _ =     store.semiSingleton(forKey: key) as SimpleSemiSingleton
-		case .sameClassOtherKey: _ = try store.semiSingleton(forKey: otherKey, additionalInitInfo: .noNewAllocation) as ReentrantSemiSingletonInit
-		case .sameClassSameId:   _ = try store.semiSingleton(forKey: key,      additionalInitInfo: .noNewAllocation) as ReentrantSemiSingletonInit
-		case .sameClassOtherStoreOtherKey(store: let s):              _ = try s.semiSingleton(forKey: otherKey, additionalInitInfo: .noNewAllocation)                           as ReentrantSemiSingletonInit
-		case .sameClassOtherStoreThenSameStoreOtherKey(store: let s): _ = try s.semiSingleton(forKey: otherKey, additionalInitInfo: .sameClassOtherStoreOtherKey(store: store)) as ReentrantSemiSingletonInit
+			case .noNewAllocation: ()
+			case .otherClass:        _ =     store.semiSingleton(forKey: key) as SimpleSemiSingleton
+			case .sameClassOtherKey: _ = try store.semiSingleton(forKey: otherKey, additionalInitInfo: .noNewAllocation) as ReentrantSemiSingletonInit
+			case .sameClassSameId:   _ = try store.semiSingleton(forKey: key,      additionalInitInfo: .noNewAllocation) as ReentrantSemiSingletonInit
+			case .sameClassOtherStoreOtherKey(store: let s):              _ = try s.semiSingleton(forKey: otherKey, additionalInitInfo: .noNewAllocation)                           as ReentrantSemiSingletonInit
+			case .sameClassOtherStoreThenSameStoreOtherKey(store: let s): _ = try s.semiSingleton(forKey: otherKey, additionalInitInfo: .sameClassOtherStoreOtherKey(store: store)) as ReentrantSemiSingletonInit
 		}
 	}
 	

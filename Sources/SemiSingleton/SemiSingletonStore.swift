@@ -223,11 +223,7 @@ public class SemiSingletonStore {
 		
 	}
 	
-#if !os(Linux)
-	private var registeredObjects = NSMapTable<StoreKey, AnyObject>.strongToWeakObjects()
-#else
-	private var registeredObjects = LinuxStrongToWeakMapTable<StoreKey, AnyObject>()
-#endif
+	private var registeredObjects = StrongToWeakMapTable<StoreKey, AnyObject>()
 	private let retrievingQueue = DispatchQueue(label: "SemiSingletonStore Object Retrieving Queue", qos: .userInitiated)
 	
 	private var ongoingInitKeys = Set<AnyHashable>()

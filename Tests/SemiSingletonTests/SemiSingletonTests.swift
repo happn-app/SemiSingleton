@@ -114,6 +114,24 @@ class SemiSingletonTests: XCTestCase {
 		XCTAssertEqual(ReentrantSemiSingletonInit.objectNumber, 3)
 	}
 	
+	func testActorDeallocationSemiSingleton() {
+#if !canImport(ObjectiveC)
+		NSLog("Test unavailable on this OS.")
+#else
+		let key = #function
+		let semiSingletonStore = SemiSingletonStore(forceClassInKeys: true)
+		XCTAssert(semiSingletonStore.registeredSemiSingleton(forKey: key) as ActorSemiSingleton? == nil)
+		autoreleasepool{
+			let s: ActorSemiSingleton = semiSingletonStore.semiSingleton(forKey: key)
+			XCTAssert(semiSingletonStore.registeredSemiSingleton(forKey: key) as ActorSemiSingleton? === s)
+			XCTAssertEqual(s.key, key)
+		}
+		XCTAssert(semiSingletonStore.registeredSemiSingleton(forKey: key) as ActorSemiSingleton? == nil)
+		XCTAssert(semiSingletonStore.registeredSemiSingleton(forKey: key) as ActorSemiSingleton? == nil)
+		XCTAssert(semiSingletonStore.registeredSemiSingleton(forKey: key) as ActorSemiSingleton? == nil)
+#endif
+	}
+	
 	/* TODO: More tests... */
 	
 }

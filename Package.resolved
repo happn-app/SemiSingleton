@@ -3,7 +3,7 @@
     "pins": [
       {
         "package": "RecursiveSyncDispatch",
-        "repositoryURL": "https://github.com/happn-tech/RecursiveSyncDispatch.git",
+        "repositoryURL": "https://github.com/happn-app/RecursiveSyncDispatch.git",
         "state": {
           "branch": null,
           "revision": "04936f64e00d898006fc97b5ec938d8ce1fa14ea",

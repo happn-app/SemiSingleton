@@ -9,7 +9,7 @@ let package = Package(
 	],
 	dependencies: [
 		.package(url: "https://github.com/apple/swift-log.git", from: "1.2.0"),
-		.package(url: "https://github.com/happn-tech/RecursiveSyncDispatch.git", from: "1.0.0")
+		.package(url: "https://github.com/happn-app/RecursiveSyncDispatch.git", from: "1.0.0")
 	],
 	targets: [
 		.target(name: "SemiSingleton", dependencies: [

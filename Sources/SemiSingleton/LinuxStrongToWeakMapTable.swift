@@ -17,10 +17,12 @@ import Foundation
 
 
 
+#if os(Linux)
+
 /**
  Unsafe class (not fully tested, not fully documented).
  Do not use outside of the SemiSingleton project! */
-class StrongToWeakMapTable<KeyType : Hashable, ObjectType : AnyObject> {
+class LinuxStrongToWeakMapTable<KeyType : Hashable, ObjectType : AnyObject> {
 	
 	func object(forKey key: KeyType) -> ObjectType? {
 		guard let w = store[key] else {return nil}
@@ -52,3 +54,5 @@ class StrongToWeakMapTable<KeyType : Hashable, ObjectType : AnyObject> {
 	private var store = [KeyType: WeakElementBox<ObjectType>]()
 	
 }
+
+#endif

@@ -22,7 +22,7 @@ import Foundation
 /**
  Unsafe class (not fully tested, not fully documented).
  Do not use outside of the SemiSingleton project! */
-class LinuxStrongToWeakMapTable<KeyType : Hashable, ObjectType : AnyObject> {
+final class LinuxStrongToWeakMapTable<KeyType : Hashable, ObjectType : AnyObject> {
 	
 	func object(forKey key: KeyType) -> ObjectType? {
 		guard let w = store[key] else {return nil}

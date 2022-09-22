@@ -58,7 +58,7 @@ public protocol SemiSingletonWithFallibleInit : AnyObject {
 }
 
 
-public class SemiSingletonStore {
+public final class SemiSingletonStore {
 	
 	public enum Error : Swift.Error {
 		

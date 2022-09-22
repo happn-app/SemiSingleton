@@ -24,8 +24,8 @@ import RecursiveSyncDispatch
 
 public protocol SemiSingleton : AnyObject {
 	
-	associatedtype SemiSingletonKey : Hashable
-	associatedtype SemiSingletonAdditionalInitInfo
+	associatedtype SemiSingletonKey : Sendable & Hashable
+	associatedtype SemiSingletonAdditionalInitInfo : Sendable
 	
 	/** Init a semi-singleton instance.
 	 
@@ -42,8 +42,8 @@ public protocol SemiSingleton : AnyObject {
 
 public protocol SemiSingletonWithFallibleInit : AnyObject {
 	
-	associatedtype SemiSingletonKey : Hashable
-	associatedtype SemiSingletonAdditionalInitInfo
+	associatedtype SemiSingletonKey : Sendable & Hashable
+	associatedtype SemiSingletonAdditionalInitInfo : Sendable
 	
 	/** Init a semi-singleton instance.
 	 

@@ -27,15 +27,14 @@ public protocol SemiSingleton : AnyObject {
 	associatedtype SemiSingletonKey : Sendable & Hashable
 	associatedtype SemiSingletonAdditionalInitInfo : Sendable
 	
-	/** Init a semi-singleton instance.
+	/**
+	 Init a semi-singleton instance.
 	 
-	 You can use the additional info to help initializing your instance. The store
-	 is given for informational purposes, mainly so you can instantiate other
-	 semi-singletons from the same store.
+	 You can use the additional info to help initializing your instance.
+	 The store is given for informational purposes, mainly so you can instantiate other semi-singletons from the same store.
 	 
-	 This init method cannot fail. If you want to create a semi-singleton whose
-	 initialization can fail, you should conform to the
-	 `SemiSingletonWithFallibleInit` protocol. */
+	 This init method cannot fail.
+	 If you want to create a semi-singleton whose initialization can fail, you should conform to the `SemiSingletonWithFallibleInit` protocol. */
 	init(key: SemiSingletonKey, additionalInfo: SemiSingletonAdditionalInitInfo, store: SemiSingletonStore)
 	
 }
@@ -45,14 +44,14 @@ public protocol SemiSingletonWithFallibleInit : AnyObject {
 	associatedtype SemiSingletonKey : Sendable & Hashable
 	associatedtype SemiSingletonAdditionalInitInfo : Sendable
 	
-	/** Init a semi-singleton instance.
+	/**
+	 Init a semi-singleton instance.
 	 
-	 You can use the additional info to help initializing your instance. The store
-	 is given for informational purposes, mainly so you can instantiate other
-	 semi-singletons from the same store.
+	 You can use the additional info to help initializing your instance.
+	 The store is given for informational purposes, mainly so you can instantiate other semi-singletons from the same store.
 	 
-	 This init method cann fail. If you create a semi-singleton whose init cannot
-	 fail, you should consider conforming to `SemiSingleton` instead. */
+	 This init method can fail.
+	 If you create a semi-singleton whose init cannot fail, you should consider conforming to `SemiSingleton` instead. */
 	init(key: SemiSingletonKey, additionalInfo: SemiSingletonAdditionalInitInfo, store: SemiSingletonStore) throws
 	
 }
